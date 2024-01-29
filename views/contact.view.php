@@ -2,12 +2,17 @@
 
 include "../partials/header.php"; 
 
+// On requiert notre fichier php_mailer.php qui contient les constantes pour la configuration du serveur SMTP
+// ainsi que autoload.php qui permet de charger les classes PHPMailer
+require_once '../config/php_mailer.php';
+require_once '../vendor/autoload.php';
+
 ?>
 
 <h1>Page de contact</h1>
 
     <!-- Notre formulaire de contact avec méthode POST -->
-    <form action="#" class="contact-form" method="POST">
+    <form class="contact-form" method="POST">
         <label for="email">Email :</label>
         <input name="email" type="email">
 
@@ -27,5 +32,6 @@ include "../partials/header.php";
 
 <?php
 
+require_once '../controllers/contact.php';
 
 include "../partials/footer.php"; ?>

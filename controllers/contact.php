@@ -1,13 +1,5 @@
 <?php 
 
-// On requiert notre vue pour la page de contact
-require_once '../views/contact.view.php';
-
-// On requiert notre fichier php_mailer.php qui contient les constantes pour la configuration du serveur SMTP
-// ainsi que autoload.php qui permet de charger les classes PHPMailer
-require_once '../config/php_mailer.php';
-require_once '../vendor/autoload.php';
-
 // On utilise la classe PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -54,3 +46,4 @@ if (($_SERVER['REQUEST_METHOD'] === 'POST')) {
 } else {
     $error = "Veuillez remplir tous les champs";
 }
+
