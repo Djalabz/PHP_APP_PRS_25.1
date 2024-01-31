@@ -110,5 +110,6 @@ input, textarea {
 }
 
 .error {
+    text-align: center;
     color: red;
 }

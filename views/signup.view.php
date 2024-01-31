@@ -7,6 +7,7 @@ ob_start();
 
 include "../partials/header.php";
 include "../config/db_config.php";
+include "../utils/functions.php";
 
 
 if ($_SERVER['REQUEST_METHOD'] === "POST" && $_POST['password'] === $_POST['confirm']) {
@@ -23,25 +24,34 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && $_POST['password'] === $_POST['conf
             die();
         }
 
+        // On vérifie que le mdp correspone aux critères de la CNIL (12 car, au moins 1 chiffre, 1 Maj, 1 min et 1 caractère spécial)
+        // Fonction pour vérifier une regex sur une string preg_match()
+
         // Avant d'envoyer le mdp en bdd il faut le hasher !
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
-        // Écrire une requete préparée avec pdo
-        $sql = "INSERT INTO users(name, email, password) VALUES(?, ?, ?)";
-        $stmt = $pdo->prepare($sql);
-        $result = $stmt->execute([$name, $email, $hash]);
-
-        // Afficher les erreurs si il y en a, sinon un message de succès 
-        if ($result) {
-            // On redirige vers une page de succès 
-            header('Location: signup-sucess.view.php');
-            // On termine notre zone tampon
-            ob_end_flush();
+        // 
+        if (checkExists('name', $name, $pdo)) {
+            $error = "Le nom est déjà pris";
+        } else if (checkExists('email', $email, $pdo)) {
+            $error = "L'email est déjà pris";
         } else {
-            $error = "Erreur pendant l'ajout : " . $stmt->errorInfo();
-        } 
-    }
+            // Écrire une requete préparée avec pdo
+            $sql = "INSERT INTO users(name, email, password) VALUES(?, ?, ?)";
+            $stmt = $pdo->prepare($sql);
+            $result = $stmt->execute([$name, $email, $hash]);
 
+            // Afficher les erreurs si il y en a, sinon un message de succès 
+            if ($result) {
+                // On redirige vers une page de succès 
+                header('Location: signup-sucess.view.php');
+                // On termine notre zone tampon
+                ob_end_flush();
+            } else {
+                $error = "Erreur pendant l'ajout : " . $stmt->errorInfo();
+            } 
+        }
+    }
     else {
         $error = "Veuillez remplir tous les champs";
     }
@@ -63,8 +73,10 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && $_POST['password'] === $_POST['conf
     <input type="submit" name="submit" value="Signup">
 </form>
 
+
+
 <?php if (isset($error)) : ?> 
-    <p><?= $error ?></p>
+    <p class="error"><?= $error ?></p>
 <?php endif ?>
 
 <?php 
