@@ -92,7 +92,7 @@ STYLE DE LA HOMEPAGE */
 
 /* PAGE DE CONTACT  */
 
-.contact-form, .signup-form {
+.contact-form, .signup-form, .login-form {
     display: flex;
     flex-direction: column;
     justify-content: center;

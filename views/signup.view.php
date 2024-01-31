@@ -18,8 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $password = $_POST['password'];
         $confirm = $_POST['confirm'];
 
+        // Si les mdp sont les memes
         if ($password === $confirm) {
-
             // On vérifie le format de l'email 
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $error = "Le format de l'email n'est pas bon";
