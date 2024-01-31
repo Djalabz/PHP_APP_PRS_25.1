@@ -92,15 +92,16 @@ STYLE DE LA HOMEPAGE */
 
 /* PAGE DE CONTACT  */
 
-.contact-form {
+.contact-form, .signup-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.contact-form input, textarea {
+input, textarea {
     width: 20rem;
+    height: 1.5rem;
     margin-bottom: 1rem;
 } 
 

@@ -14,6 +14,7 @@
             <li><a href="products.view.php">Products</a></li>
             <li><a href=""></a>Cart</li>
             <li><a href=""></a>Profile</li>
+            <li><a href="signup.view.php">Signup</a></li>
             <li><a href="contact.view.php">Contact</a></li>
         </ul>
     </nav>
