@@ -1,6 +1,12 @@
 <?php 
 
+// Comme on envoit/modifie des en-tetes successivement (avec les include et le header(location) plus bas)
+// On crée à partir de cette ligne une zone tampon qui se termine après notre redirection 
+// Cela permet d'envoyer en une seule pièce le code ci-dessous
+ob_start();
+
 include "../partials/header.php";
+include "../config/db_config.php";
 
 
 if ($_SERVER['REQUEST_METHOD'] === "POST" && $_POST['password'] === $_POST['confirm']) {
@@ -17,7 +23,23 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && $_POST['password'] === $_POST['conf
             die();
         }
 
-        
+        // Avant d'envoyer le mdp en bdd il faut le hasher !
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+
+        // Écrire une requete préparée avec pdo
+        $sql = "INSERT INTO users(name, email, password) VALUES(?, ?, ?)";
+        $stmt = $pdo->prepare($sql);
+        $result = $stmt->execute([$name, $email, $hash]);
+
+        // Afficher les erreurs si il y en a, sinon un message de succès 
+        if ($result) {
+            // On redirige vers une page de succès 
+            header('Location: signup-sucess.view.php');
+            // On termine notre zone tampon
+            ob_end_flush();
+        } else {
+            $error = "Erreur pendant l'ajout : " . $stmt->errorInfo();
+        } 
     }
 
     else {
