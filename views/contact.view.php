@@ -33,5 +33,6 @@ require_once '../vendor/autoload.php';
 <?php
 
 require_once '../controllers/contact.php';
+include "../partials/footer.php";
 
-include "../partials/footer.php"; ?>
+?>
