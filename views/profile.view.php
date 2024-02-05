@@ -9,7 +9,11 @@ ob_end_flush();
 
 ?>
 
-<h1>Bienvenue <?= $_SESSION['user']['name'] ?></h1>
+<h1>Profil de <?= $_SESSION['user']['name'] ?></h1>
+
+<!-- Ici afficher un avatar par défaut -->
+<img src="../<?= $_SESSION['user']['avatar'] ?>">
+
 
 <?php 
 

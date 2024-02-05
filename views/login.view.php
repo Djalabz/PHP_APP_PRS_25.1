@@ -5,14 +5,6 @@ ob_start();
 include "../partials/header.php";
 include "../config/db_config.php";
 
-// Coder la logique pour le login 
-
-// 1) Vérifier que le form ait été soumis 
-// 2) Vérifier que le mail est bien un mail 
-// 3) Chercher en BDD l'email en question, si on ne trouve rien on envoit un message adéquat 
-// 4) Si c'est bon on vient comparer les mdp - password_verify(mdp de l'input, hash de la bdd)
-// 5) Si tout est bon, on redirige vers une page d'index (ou de profil) 
-
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -28,8 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     $stmt->execute([$email]);
     $result = $stmt->fetch();
-
-    var_dump($result);
 
     if (!$result) {
         $error = "L'email n''existe pas, veuillez vous enregistrer via notre Signup";

@@ -9,10 +9,12 @@ include "../partials/header.php";
 include "../config/db_config.php";
 include "../utils/functions.php";
 
-
+// On vérifie que le form ait été soumis
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
+    // On vérifie que TOUS les champs soient bien remplis
     if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['confirm'])) {
 
+        // Pour name on échappe les carcatères spéciaux
         $name = htmlspecialchars($_POST['name']);
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -82,8 +84,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     <input type="password" name="confirm" placeholder="Votre confirmation du mot de passe...">
     <input type="submit" name="submit" value="Signup">
 </form>
-
-
 
 <?php if (isset($error)) : ?> 
     <p class="error"><?= $error ?></p>
