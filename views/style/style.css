@@ -99,11 +99,17 @@ STYLE DE LA HOMEPAGE */
     align-items: center;
 }
 
+
+
 input, textarea {
     width: 20rem;
     height: 1.5rem;
     margin-bottom: 1rem;
 } 
+
+.contact-form textarea {
+    height: 10rem;
+}
 
 .contact-form label {
     text-align: left;
@@ -148,7 +154,7 @@ input, textarea {
 }
 
 .left {
-    background: linear-gradient(90deg, rgb(0, 13, 161) 0%, rgb(209, 209, 255) 100%);
+    background: linear-gradient(90deg, rgb(105, 117, 255) 0%, rgb(209, 209, 255) 100%);
     width: 15rem;
     height: 100%;
     text-align: center;
@@ -157,6 +163,8 @@ input, textarea {
     align-items: center;
     justify-content: center;
     color: white;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 .right {
