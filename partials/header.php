@@ -2,6 +2,8 @@
 
 session_start();
 
+parse_url($_SERVER['REQUEST_URI'])['path'] === '/index.php' ? $path = '' : $path = '../';
+
 ?> 
 
 <!DOCTYPE html>
@@ -15,21 +17,19 @@ session_start();
 <body>
     <nav>
         <ul>
-            <li><a href="index.view.php">Home</a></li>
-            <li><a href="contact.view.php">Contact</a></li>
+            <li><a href="/index.php">Home</a></li>
+            <li><a href="<?= $path ?>/views/contact.view.php">Contact</a></li>
 
             <?php if (isset($_SESSION['user']) && $_SESSION['user']['logged']) :  ?> 
 
-                <li><a href="products.view.php">Products</a></li>
-                <li><a href="cart.view.php">Cart</a></li>
-                <li><a href="profile.view.php">Profile</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="<?= $path ?>views/products.view.php">Products</a></li>
+                <li><a href="<?= $path ?>views/cart.view.php">Cart</a></li>
+                <li><a href="<?= $path ?>views/profile.view.php">Profile</a></li>
+                <li><a href="<?= $path ?>views/logout.php">Logout</a></li>
             
             <?php else : ?>
-
-                <li><a href="signup.view.php">Signup</a></li>
-                <li><a href="login.view.php">Login</a></li>
-            
+                <li><a href="<?= $path ?>views/signup.view.php">Signup</a></li>
+                <li><a href="<?= $path ?>views/login.view.php">Login</a></li>
             <?php endif ?>
         </ul>
     </nav>
