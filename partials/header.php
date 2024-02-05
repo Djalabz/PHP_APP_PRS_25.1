@@ -22,7 +22,7 @@ parse_url($_SERVER['REQUEST_URI'])['path'] === '/index.php' ? $path = '' : $path
 
             <?php if (isset($_SESSION['user']) && $_SESSION['user']['logged']) :  ?> 
 
-                <li><a href="views/">Products</a></li>
+                <li><a href="<?= $path ?>views/products.view.php">Products</a></li>
                 <li><a href="<?= $path ?>views/cart.view.php">Cart</a></li>
                 <li><a href="<?= $path ?>views/profile.view.php">Profile</a></li>
                 <li><a href="<?= $path ?>views/logout.php">Logout</a></li>
