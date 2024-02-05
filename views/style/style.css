@@ -113,3 +113,12 @@ input, textarea {
     text-align: center;
     color: red;
 }
+
+
+/* CART  */
+
+
+.delete-btn {
+    background-color: brown;
+    color: white;
+}

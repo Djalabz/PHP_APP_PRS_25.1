@@ -29,15 +29,18 @@ On l'ajoute ensuite à la session au niveau de la clé cart  -->
 
  <?php endforeach ?>
 
+ <p>Mon cart contient : </p>
  <!-- Si jamais on a bien des éléments dans notre cart alors on les affiche -->
  <?php if (!empty($_SESSION['user']['cart'])) : ?> 
 
     <?php foreach ($_SESSION['user']['cart'] as $item) : ?>
 
-        <img src="<?= $item['image'] ?>">
         <h3><?= $item['title'] ?></h3>
         <p>Prix : <?= $item['price'] ?> $</p>
         <p class="description"><?= substr($item['description'], 1, 50) ?> ...</p>
+
+        <!-- Ici on veut avec unset supprimer l'élément du panier via son id -->
+        <a class="delete-btn" href="delete-product.php?delete=<?= $item['id'] ?>">Supprimer du panier</a>
 
     <?php endforeach ?>
 

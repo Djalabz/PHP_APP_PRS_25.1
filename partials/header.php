@@ -23,7 +23,7 @@ session_start();
             <?php if ($_SESSION['user']['logged']) :  ?> 
 
                 <li><a href="products.view.php">Products</a></li>
-                <li><a href=""></a>Cart</li>
+                <li><a href="cart.view.php">Cart</a></li>
                 <li><a href="profile.view.php">Profile</a></li>
                 
                 <li><a href="logout.view.php">Logout</a></li>
