@@ -1,5 +1,7 @@
 <?php 
 
+// FICHIER DE FONCTIONS CUSTOM
+
 // On va utiliser ce fichier pour regrouper les fonctions utiles de notre application
 
 function checkExists($field, $param, $pdo) {
@@ -14,4 +16,12 @@ function checkExists($field, $param, $pdo) {
     } else {
         return false;
     }
+}
+
+// Fonction custom qui nous permet d'inspecter des variables 
+function dd($param) {
+    echo "<pre>";
+    var_dump($param);
+    echo "</pre>";
+    die();
 }

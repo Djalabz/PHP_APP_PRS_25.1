@@ -122,3 +122,12 @@ input, textarea {
     background-color: brown;
     color: white;
 }
+
+
+/* PROFILE PAGE  */
+
+.avatar {
+    width: 8.5rem;
+    height: 9rem;
+    border-radius: 100%;
+}
