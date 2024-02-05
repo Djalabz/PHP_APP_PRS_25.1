@@ -33,3 +33,4 @@ parse_url($_SERVER['REQUEST_URI'])['path'] === '/index.php' ? $path = '' : $path
             <?php endif ?>
         </ul>
     </nav>
+<div class="wrapper">

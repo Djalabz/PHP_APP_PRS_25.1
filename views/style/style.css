@@ -3,10 +3,27 @@ body {
     margin: 0;
 }
 
+.wrapper {
+    padding: 4rem;
+}
+
 h1 {
     text-align: center;
     margin-bottom: 3rem;
-    margin-top: 5rem;
+}
+
+button {
+    height: 2rem;
+    background-color: darkslategrey;
+    color: white;
+    border: 1px darkslategray solid;
+    padding-left: 0.2rem;
+    border-radius: 6px;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
 }
 
 /* PAGE DES PRODUITS  */
@@ -99,13 +116,23 @@ STYLE DE LA HOMEPAGE */
     align-items: center;
 }
 
-
-
 input, textarea {
     width: 20rem;
     height: 1.5rem;
     margin-bottom: 1rem;
+    height: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid darkgray;
+    padding-left: 0.2rem;
 } 
+
+input[type="submit"] {
+    width: 20.5rem;
+    height: 2rem;
+    background-color: darkslategrey;
+    color: white;
+    border: 1px darkslategray solid;
+}
 
 .contact-form textarea {
     height: 10rem;
@@ -154,7 +181,7 @@ input, textarea {
 }
 
 .left {
-    background: linear-gradient(90deg, rgb(105, 117, 255) 0%, rgb(209, 209, 255) 100%);
+    background: linear-gradient(90deg, darkslategrey 0%, darkgray 100%);
     width: 15rem;
     height: 100%;
     text-align: center;
