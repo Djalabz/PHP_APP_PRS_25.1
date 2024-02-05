@@ -4,7 +4,7 @@ body {
 }
 
 .wrapper {
-    padding: 4rem;
+    padding: 5rem;
 }
 
 h1 {
@@ -67,7 +67,11 @@ img {
 
 nav {
     position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     width: 100vw;
+    height: 4rem;
     top: 0;
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.44);
@@ -79,7 +83,6 @@ nav {
 nav ul {
     display: flex;
     flex-direction: row;
-    justify-content: end;
     margin-right: 2rem;
 }
 
@@ -96,8 +99,7 @@ li {
     list-style-type: none;
 }
 
-/* 
-STYLE DE LA HOMEPAGE */
+/* STYLE DE LA HOMEPAGE */
 
 .container {
     display: flex;
@@ -105,7 +107,6 @@ STYLE DE LA HOMEPAGE */
     justify-content: center;
     align-items: center;
 }
-
 
 /* PAGE DE CONTACT  */
 
@@ -127,6 +128,7 @@ input, textarea {
 } 
 
 input[type="submit"] {
+    cursor: pointer;
     width: 20.5rem;
     height: 2rem;
     background-color: darkslategrey;
