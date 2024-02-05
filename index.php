@@ -1,4 +1,6 @@
-<?php include "partials/header.php"; ?>
+<?php include "partials/header.php";
+
+?>
 
     <div class="container">
         <h1>Bienvenue sur mon app en PHP !</h1>
