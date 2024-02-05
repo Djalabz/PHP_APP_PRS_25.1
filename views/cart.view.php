@@ -20,7 +20,7 @@ if (isset($_GET['product'])) {
 On l'ajoute ensuite à la session au niveau de la clé cart  -->
 <?php foreach($products as $product) : ?>
  
-     <?php if ($product['id'] == $product_id) : ?>
+     <?php if (isset($product_id) && $product['id'] == $product_id) : ?>
 
         <?php $_SESSION['user']['cart'][$product_id]  = $product ?>
         <h2>Vous avez ajouté <?= $_SESSION['user']['cart'][$product_id]['title']  ?> au panier</h2>
@@ -29,7 +29,6 @@ On l'ajoute ensuite à la session au niveau de la clé cart  -->
 
  <?php endforeach ?>
 
- <p>Mon cart contient : </p>
  <!-- Si jamais on a bien des éléments dans notre cart alors on les affiche -->
  <?php if (!empty($_SESSION['user']['cart'])) : ?> 
 
@@ -44,7 +43,11 @@ On l'ajoute ensuite à la session au niveau de la clé cart  -->
 
     <?php endforeach ?>
 
- <?php endif  ?>
+<?php else : ?>
+
+    <h2>Votre panier est vide ...</h2>
+
+<?php endif  ?>
 
  <!-- Lien vers la page de checkout / paiement -->
  <a href="checkout.view.php">Allez au checkout</a>
