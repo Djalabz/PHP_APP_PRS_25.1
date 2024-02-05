@@ -1,0 +1,2 @@
+# Utiliser index.php comme fichier d'index
+DirectoryIndex index.php

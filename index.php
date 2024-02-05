@@ -1,4 +1,4 @@
-<?php include "../partials/header.php"; ?>
+<?php include "partials/header.php"; ?>
 
     <div class="container">
         <h1>Bienvenue sur mon app en PHP !</h1>
@@ -7,4 +7,4 @@
     </div>
 
 
-<?php include "../partials/footer.php"; ?>
+<?php include "partials/footer.php"; ?>
