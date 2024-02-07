@@ -53,7 +53,7 @@ footer {
     box-shadow: 1px 15px 12px -6px rgba(166,166,166,1);
 }
 
-img {
+.avatar, .product-img, .home-img {
     width: 200px;
     height: 250px;
     margin-bottom: 2rem;
@@ -76,6 +76,13 @@ img {
 
 /* NAVBAR  */
 
+.burger-btn {
+    width: 2rem;
+    position: fixed;
+    left: 1rem;
+    cursor: pointer;
+}
+
 nav {
     position: fixed;
     display: flex;
@@ -91,10 +98,13 @@ nav {
     -webkit-backdrop-filter: blur(10.4px);
 }
 
-nav ul {
+.menu {
     display: flex;
     flex-direction: row;
     margin-right: 2rem;
+    position: fixed;
+    left: -20rem;
+    opacity: 0;
 }
 
 nav a {
@@ -109,6 +119,8 @@ nav ul li {
 li {
     list-style-type: none;
 }
+
+
 
 /* STYLE DE LA HOMEPAGE */
 
