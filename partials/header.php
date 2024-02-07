@@ -31,6 +31,10 @@ if ($_SERVER['REQUEST_URI'] === '/index.php') {
     <title>Mon eshop en PHP</title>
     <link rel="stylesheet" href="<?= $path ?>/views/style/style.css">
     <script src="<?= $path ?>/views/scripts/app.js" defer></script>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 </head>
 <body>
     <nav>
@@ -42,7 +46,6 @@ if ($_SERVER['REQUEST_URI'] === '/index.php') {
             <?php if (isset($_SESSION['user']) && $_SESSION['user']['logged']) :  ?> 
 
                 <li><a href="<?= $path ?>/views/products.view.php">Products</a></li>
-                <li><a href="<?= $path ?>/views/cart.view.php">Cart</a></li>
                 <li><a href="<?= $path ?>/views/profile.view.php">Profile</a></li>
                 <li><a href="<?= $path ?>/views/logout.php">Logout</a></li>
             
@@ -51,6 +54,9 @@ if ($_SERVER['REQUEST_URI'] === '/index.php') {
                 <li><a href="<?= $path ?>/views/login.view.php">Login</a></li>
             <?php endif ?>
         </ul>
+        <?php if (isset($_SESSION['user']) && $_SESSION['user']['logged']) :  ?> 
+            <li><a href="<?= $path ?>/views/cart.view.php"><img class="cart-btn" src="<?= $path ?>/assets/icons/shopping-cart.png"></a>
+        <?php endif ?>
     </nav>
 <div class="wrapper">
 
