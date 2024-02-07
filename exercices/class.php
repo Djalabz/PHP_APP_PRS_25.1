@@ -31,16 +31,18 @@ class Car {
     }
 }
 
+
+
 // Je code une classe enfant / fille Convertible qui hérie des proriétés et des methodes de Car (L'héritage)
 // À une seule condition cependant : que la portée des propriétés ou méthodes soit public ou protected
-// class Convertible extends Car {
-//     public $roof;
-//     public $model = "twingo";
+class Convertible extends Car {
+    public $roof;
+    public $model = "twingo";
 
-//     public function __construct($brand, $color, $year, $roof) {
-//         $this->roof = $roof; 
-//     }
-// }
+    public function __construct($brand, $color, $year, $roof) {
+        $this->roof = $roof; 
+    }
+}
 
 
 // On instancie la classe Car et on crée un objet $renault 
