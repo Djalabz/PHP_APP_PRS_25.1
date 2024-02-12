@@ -12,7 +12,7 @@ include "../partials/header.php";
 
         <?php foreach($products as $product) : ?>
             <div class="product">
-                <a href="product.view.php?product=<?= $product['id'] ?>"><img src="<?= $product['image'] ?>"></a>
+                <a href="product.view.php?product=<?= $product['id'] ?>"><img class="product-img" src="<?= $product['image'] ?>"></a>
                 <h3><?= $product['title'] ?></h3>
                 <p>Prix : <?= $product['price'] ?> $</p>
                 <p class="description"><?= substr($product['description'], 1, 50) ?> ...</p>

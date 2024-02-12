@@ -21,6 +21,7 @@ Il faudrait afficher le nom, l'avatar, la date de création du compte, l'email -
         <h2><?= $_SESSION['user']['name'] ?></h2>
     </div>
     <div class="right">
+        
         <h2>Informations</h2>
         <hr>
         <section class="infos">

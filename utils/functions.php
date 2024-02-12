@@ -18,7 +18,7 @@ function checkExists($field, $param, $pdo) {
     }
 }
 
-// Fonction custom qui nous permet d'inspecter des variables 
+// Fonction dump and die custom qui nous permet d'inspecter des variables 
 function dd($param) {
     echo "<pre>";
     var_dump($param);
