@@ -1,8 +1,8 @@
 <?php 
 
 // J'inclus la page sur laquelle je fais l'appel API pour récupérer les produits
-include "../config/curl_products.php";
-include "../partials/header.php";
+include "config/curl_products.php";
+include "partials/header.php";
 
 ?> 
 
@@ -22,4 +22,4 @@ include "../partials/header.php";
 
     </div>
 
-<?php include "../partials/footer.php"; ?>
+<?php include "partials/footer.php"; ?>

@@ -1,8 +1,8 @@
 <?php 
 
 // J'inclus la page sur laquelle je fais l'appel API pour récupérer les produits
-include "../config/curl_products.php";
-include "../partials/header.php";
+include "config/curl_products.php";
+include "partials/header.php";
 
 // Si dans l'URL on a un paramètre product qui vaut un id alors on crée une variable
 // product_id contenant le fameux id
@@ -28,4 +28,4 @@ if (isset($_GET['product'])) {
 
     <?php endforeach ?>
 
-<?php include "../partials/footer.php"; ?>
+<?php include "partials/footer.php"; ?>

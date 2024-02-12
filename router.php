@@ -15,7 +15,7 @@ $routes = [
     '/logout' => 'views/logout.php',
     '/contact' => 'views/contact.view.php',
     '/delete' => 'views/delete-product.php',
-    '/cart' => 'views/cart.php'
+    '/cart' => 'views/cart.view.php'
 ];
 
 // On vient vérifier dans le tableau $routes si une des clés correspond au chemin de l'URL ($uri)

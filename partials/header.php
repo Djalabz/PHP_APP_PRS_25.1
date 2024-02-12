@@ -11,16 +11,6 @@ session_start();
 // On fait notre opérateur ternaire et on adapte la valeur de $path
 // $uri === 'index.php' ? $path = 'views/' : $path = '';
 
-$_SERVER['REQUEST_URI'] === '/index.php' ? $path = '' : $path = '..';
-
-if ($_SERVER['REQUEST_URI'] === '/index.php') {
-    $path = '';
-    $path_css = 'views/';
-} else {
-    $path = '..';
-    $path_css = '';
-}
-
 ?> 
 
 <!DOCTYPE html>
@@ -29,8 +19,8 @@ if ($_SERVER['REQUEST_URI'] === '/index.php') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon eshop en PHP</title>
-    <link rel="stylesheet" href="style/style.css">
-    <script src="scripts/app.js" defer></script>
+    <link rel="stylesheet" href="views/style/style.css">
+    <script src="views/scripts/app.js" defer></script>
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"

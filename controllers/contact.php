@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-include "../dotenv.php";
+include "dotenv.php";
 
 // Récupération des données rentrées par l'utilisateur du formulaire de contact 
 if (($_SERVER['REQUEST_METHOD'] === 'POST')) {

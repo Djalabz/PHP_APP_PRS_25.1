@@ -2,8 +2,8 @@
 
 ob_start();
 
-include "../partials/header.php";
-include "../config/db_config.php";
+include "partials/header.php";
+include "config/db_config.php";
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $email = $_POST['email'];
@@ -56,6 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
 <?php 
 
-include "../partials/footer.php";
+include "partials/footer.php";
 
 ?>

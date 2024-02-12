@@ -1,6 +1,6 @@
 <?php 
 
-include "../dotenv.php";
+include "dotenv.php";
 
 // Classe de connexion DB pour database avec PDO
 class DB {
