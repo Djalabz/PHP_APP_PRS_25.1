@@ -3,8 +3,8 @@
 session_start();
 
 // J'inclus la page sur laquelle je fais l'appel API pour récupérer les produits
-include "../config/curl_products.php";
-include "../partials/header.php";
+include "config/curl_products.php";
+include "partials/header.php";
 
 // Si dans l'URL on a un paramètre product qui vaut un id alors on crée une variable
 // product_id contenant le fameux id
@@ -21,7 +21,6 @@ On l'ajoute ensuite à la session au niveau de la clé cart  -->
 <?php foreach($products as $product) : ?>
      <?php if (isset($product_id) && $product['id'] == $product_id) : ?>
         <?php $_SESSION['user']['cart'][$product_id]  = $product ?>
-        <h2>Vous avez ajouté <?= $_SESSION['user']['cart'][$product_id]['title']  ?> au panier</h2>
 
         <!-- // Quand on ajoute un produit, si il n'est pas déjà dans le panier alors on lui ajoute  -->
         <!-- // une clé quantity qui vaudrait 1. Si il y est déjà on incrémente quantity. -->
@@ -39,7 +38,7 @@ On l'ajoute ensuite à la session au niveau de la clé cart  -->
         <p class="description"><?= substr($item['description'], 1, 50) ?> ...</p>
 
         <!-- Ici on veut avec unset supprimer l'élément du panier via son id -->
-        <a class="delete-btn" href="delete-product.php?delete=<?= $item['id'] ?>">Supprimer du panier</a>
+        <a class="delete-btn" href="delete?delete=<?= $item['id'] ?>">Supprimer du panier</a>
 
     <?php endforeach ?>
 
@@ -50,7 +49,7 @@ On l'ajoute ensuite à la session au niveau de la clé cart  -->
 <?php endif  ?>
 
  <!-- Lien vers la page de checkout / paiement -->
- <a href="checkout.view.php">Allez au checkout</a>
+ <a href="checkout">Allez au checkout</a>
 
 
-<?php include "../partials/footer.php"; ?>
+<?php include "partials/footer.php"; ?>
