@@ -37,7 +37,7 @@ session_start();
 
                 <li><a href="products">Products</a></li>
                 <li><a href="profile">Profile</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="logout">Logout</a></li>
             
             <?php else : ?>
                 <li><a href="signup">Signup</a></li>
