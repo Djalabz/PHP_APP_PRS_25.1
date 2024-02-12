@@ -39,7 +39,7 @@ On l'ajoute ensuite à la session au niveau de la clé cart  -->
         <p class="description"><?= substr($item['description'], 1, 50) ?> ...</p>
 
         <!-- Ici on veut avec unset supprimer l'élément du panier via son id -->
-        <a class="delete-btn" href="delete-product.php?delete=<?= $item['id'] ?>">Supprimer du panier</a>
+        <a class="delete-btn" href="delete?delete=<?= $item['id'] ?>">Supprimer du panier</a>
 
     <?php endforeach ?>
 
@@ -50,7 +50,7 @@ On l'ajoute ensuite à la session au niveau de la clé cart  -->
 <?php endif  ?>
 
  <!-- Lien vers la page de checkout / paiement -->
- <a href="checkout.view.php">Allez au checkout</a>
+ <a href="checkout">Allez au checkout</a>
 
 
 <?php include "../partials/footer.php"; ?>

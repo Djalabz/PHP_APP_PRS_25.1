@@ -49,7 +49,7 @@ class DB {
     }
 }
 
-// On instancie notre classe DBet on créeun objet connexion
+// On instancie notre classe DB et on créeun objet connexion
 $connexion = new DB($dbname, $dbhost, $dbport, $dbusername, $dbpassword);
 
 // On attribue à $pdo lecontenu de lapropriété pdo de notre classe

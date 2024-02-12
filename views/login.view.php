@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             $_SESSION['user']['logged'] = true;
             
             // On redirige vers une page home ou profile
-            header('Location: profile.view.php');
+            header('Location: profile');
             ob_end_flush();
         } else {
             $error = "Le mot de passe n'est pas le bon";
