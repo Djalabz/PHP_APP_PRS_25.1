@@ -7,7 +7,7 @@ class DB {
     private $username;
     private $password;
     private $options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC);
-    private $pdo;
+    public $pdo;
 
     // Constructeur pour notre classe 
     public function __construct($dsn, $username, $password) {
@@ -22,7 +22,6 @@ class DB {
 
     // Méthode de connexion à la BDD
     public function connect() {
-        echo "test";
         try {            
             $this->pdo = new PDO($this->dsn, $this->username, $this->password, $this->options);
             echo 'Connexion réussie !';
@@ -45,4 +44,6 @@ class DB {
 }
 
 $connexion = new DB();
+$pdo = $connexion->pdo;
+
 
