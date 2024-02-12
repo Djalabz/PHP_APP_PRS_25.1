@@ -16,6 +16,17 @@ if (isset($_GET['product'])) {
 
 <h1>Cart</h1>
 
+<!-- On vient récupérer l'id du produit que l'on veut ajouter au panier
+On l'ajoute ensuite à la session au niveau de la clé cart  -->
+<?php foreach($products as $product) : ?>
+     <?php if (isset($product_id) && $product['id'] == $product_id) : ?>
+        <?php $_SESSION['user']['cart'][$product_id]  = $product ?>
+
+        <!-- // Quand on ajoute un produit, si il n'est pas déjà dans le panier alors on lui ajoute  -->
+        <!-- // une clé quantity qui vaudrait 1. Si il y est déjà on incrémente quantity. -->
+
+     <?php endif ?>
+ <?php endforeach ?>
 
  <!-- Si jamais on a bien des éléments dans notre cart alors on les affiche -->
  <?php if (!empty($_SESSION['user']['cart'])) : ?> 
