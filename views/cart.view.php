@@ -46,15 +46,26 @@ On l'ajoute ensuite à la session au niveau de la clé cart  -->
  <?php if (!empty($_SESSION['user']['cart'])) : ?> 
 
     <?php foreach ($_SESSION['user']['cart'] as $item) : ?>
-
         <h3><?= $item['title'] ?></h3>
-        <p>Prix : <?= $item['price'] ?> $</p>
         <p class="description"><?= substr($item['description'], 1, 50) ?> ...</p>
+        <p>Prix unitaire : <?= $item['price'] ?> $</p>
         <p>Quantité : <?= $item['quantity'] ?></p>
+        <p>Total : <?= $item['quantity'] * $item['price'] ?> $</p>
         <!-- Ici on veut avec unset supprimer l'élément du panier via son id -->
         <a class="delete-btn" href="delete?delete=<?= $item['id'] ?>">Supprimer du panier</a>
-
     <?php endforeach ?>
+
+    <?php
+        $totalCost = 0;
+        $totalArticles = 0;
+
+        foreach ($_SESSION['user']['cart'] as $item) {
+            $totalCost += ($item['quantity'] * $item['price']);
+            $totalArticles += $item['quantity'];
+        }
+
+        echo "<br>Il y a $totalArticles articles dans mon panier pour une valeur de $totalCost $";
+    ?>
 
 <?php else : ?>
 
