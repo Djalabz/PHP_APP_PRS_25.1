@@ -148,6 +148,11 @@ li {
     align-items: center;
 }
 
+.home-croco {
+    width: 23rem;
+    height: 23rem;
+}
+
 /* PAGE DE CONTACT  */
 
 .contact-form, .signup-form, .login-form {

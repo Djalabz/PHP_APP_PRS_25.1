@@ -14,7 +14,7 @@ $routes = [
     '/signup-success' => 'views/signup-success.view.php',
     '/logout' => 'views/logout.php',
     '/contact' => 'views/contact.view.php',
-    '/delete' => 'views/delete-product.php',
+    '/delete' => 'views/delete.php',
     '/cart' => 'views/cart.view.php'
 ];
 

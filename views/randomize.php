@@ -58,7 +58,8 @@ function randomStudent($students) {
     $student1 = $students[$randomIndex1];
     $student2 = $students[$randomIndex2];
 
-    return "$student1 et $student2 présenteront la prochaine veille";
+    // return "$student1 et $student2 présenteront la prochaine veille";
+    return "$student1";
 }
 
-echo randomStudent($studentsPrs);
+echo randomStudent($studentsSqy);

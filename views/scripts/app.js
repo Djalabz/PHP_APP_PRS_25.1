@@ -16,7 +16,8 @@ burger.addEventListener('click', () => {
     // Pour ajouter une animation lors du click sur mon burger
     burger.classList.toggle('animate__animated');
     burger.classList.toggle('animate__swing');
-
 })
+
+
 
 console.log('Script is running');
