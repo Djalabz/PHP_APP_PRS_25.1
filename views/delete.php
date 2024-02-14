@@ -10,7 +10,13 @@ session_start();
 if (isset($_GET['delete'])) {
     $product_id = $_GET['delete'];
 
-    unset($_SESSION['user']['cart'][$product_id]);
+    if ($_SESSION['user']['cart'][$product_id]['quantity'] > 1) {
+        $_SESSION['user']['cart'][$product_id]['quantity'] -= 1;
+        
+    } else {
+        unset($_SESSION['user']['cart'][$product_id]);
+    }
+    
     header('Location: cart');
 } 
 
