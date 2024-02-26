@@ -1,15 +1,15 @@
 
 // 3) Exo Editeur HTML
 
-const input = document.querySelector('#input')
-const output = document.querySelector('.output')
-const btn = document.querySelector('button')
+// const input = document.querySelector('#input')
+// const output = document.querySelector('.output')
+// const btn = document.querySelector('button')
 
-
-btn.addEventListener('click', () => {
-    output.innerHTML = input.value
-    input.value = ""
-})
+// On écoute notre bouton 
+// window.addEventListener('click', () => {
+    // output.innerHTML = input.value
+    // input.value = ""
+// })
 
 
 // 1)  Exo Bouton d'incrémentation
