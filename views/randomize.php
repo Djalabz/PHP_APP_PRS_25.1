@@ -25,13 +25,13 @@ $studentsPrs = [
     'BEN MAHFOUDH Chaïma',
     'BLOCTEUR Arthur',
     'BOILEAU Maxim',
-    // 'DEVOUCHE Zacharie',
+    'DEVOUCHE Zacharie',
     'DUNCA Denis',
     'ESSONGHE Alex',
     'FDHIL Elyea',
     'GHEZALI Camelia',
     'HASSANI Ayoub',
-    // 'KABA Ibrahima',
+    'KABA Ibrahima',
     'KHIF Sara',
     'LALANNE Samuel',
     'MABICKASSA BOUSSOUGOU Serge-Daryl',
@@ -44,6 +44,9 @@ $studentsPrs = [
     'TROUVE Rhys',
     'YAKOU Franckamour',
 ];
+
+
+
 
 function randomStudent($students) {
     $randomIndex1 = rand(0, count($students) - 1);
@@ -62,4 +65,4 @@ function randomStudent($students) {
     return "$student1";
 }
 
-echo randomStudent($studentsSqy);
+echo randomStudent($studentsPrs);

@@ -116,3 +116,21 @@ $goldie = new User('Goldie', '13 Aout 1995', 'femme', 300);
 $goldie->spendMoney(120);
 echo "<br>";
 echo $goldie->spendMoney(190);
+
+
+class Vehicule {
+    private $immatriculation;
+    private $type = "Renault";
+
+    public function getType() {
+        return $this->type;
+    }
+
+    public function setType($new) {
+        $this->type = $new;
+    }
+}
+
+$car = new Vehicule;
+echo $car->type;
+$car->type = "Mercedez";

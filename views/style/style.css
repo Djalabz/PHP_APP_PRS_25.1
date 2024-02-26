@@ -115,8 +115,8 @@ nav {
     top:0.5rem;
     position: fixed;
     left: -15rem;
-    opacity: 0;
     transition: all 0.25s ease-in-out;
+    opacity: 0;
     z-index:0;
 }
 

@@ -19,5 +19,7 @@ burger.addEventListener('click', () => {
 })
 
 
-
 console.log('Script is running');
+
+// On affiche un bouton avec un '+' et lorsque l'on clique sur ce bouton on incrémente 
+// de 1 une variable count. Et on affiche ce compte. Il doit s'arreter à 20.

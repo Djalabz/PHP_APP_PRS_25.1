@@ -56,6 +56,7 @@ On l'ajoute ensuite à la session au niveau de la clé cart  -->
     <?php endforeach ?>
 
     <?php
+    
         $totalCost = 0;
         $totalArticles = 0;
 
