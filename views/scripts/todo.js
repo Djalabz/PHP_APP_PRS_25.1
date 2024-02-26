@@ -3,6 +3,8 @@ const input = document.querySelector('input')
 const btn = document.querySelector('.submit')
 const list = document.querySelector('ul')
 
+
+// AJOUT D'UNE TODO
 btn.addEventListener('click', () => {
     // Si l'input de la todo n'est pas vide ...
     if (input.value.length) {
@@ -25,3 +27,13 @@ btn.addEventListener('click', () => {
     }
 })
 
+// SUPPRESSION D'UNE TODO
+list.addEventListener('click', (e) => {
+    // Si la cible de notre clique possède la classe du bouton de suppression
+    // Cela signifie que l'on clique sur ce bouton de suppression
+    if (e.target.classList.contains('deleteBtn')) {
+        // On vient donc supprimer avec remove() le parent du bouton qui n'est autre 
+        // que notre todo
+        e.target.parentElement.remove()
+    }
+})
