@@ -36,9 +36,9 @@ On l'ajoute ensuite à la session au niveau de la clé cart  -->
         
         $_SESSION['user']['cart'][$product_id]['quantity']  += 1; 
         header('Location: cart');
-        ob_end_flush();} 
-    
-    ?>
+        ob_end_flush();
+    } 
+?>
  
  <?php endforeach ?>
 
