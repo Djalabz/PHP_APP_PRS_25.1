@@ -42,6 +42,13 @@ btn.addEventListener('click', () => {
     }
 })
 
+window.addEventListener('keydown', (e) => {
+    if (e.key === "Enter") {
+        console.log('Il a appuyé sur Enter !')
+    }
+})
+
+
 // SUPPRESSION D'UNE TODO (Méthode 2)
 
 // list.addEventListener('click', (e) => {

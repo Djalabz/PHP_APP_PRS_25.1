@@ -1,4 +1,8 @@
 
+const students = document.querySelector('p')
+const btn = document.querySelector('button')
+
+
 const prs = [
     'ADAM Carter',
     'ANNASSAMY Marc',
@@ -26,12 +30,17 @@ const prs = [
     'YAKOU Franckamour',
 ];
 
-function randomStudent(array) {
-    const index = Math.random(array.length - 1)
-
-    console.log(array[index])
+// On veut générer un index aléatoire afin d'afficher un élève aléatoirement 
+function randomStudents() {
+    const randomIndex = Math.floor(Math.random() * prs.length)
+    const randomStudent = prs[randomIndex]
+    students.innerText = randomStudent
 }
 
+// On met en place un interval pour afficher rapidement les étudiants à la suite 
+const myInterval = setInterval(randomStudents, 50)
 
-setInterval(randomStudent(prs), 1000)
-
+// Quand on clique sur notre bouton stop on supprime l'interval
+btn.addEventListener('click', () => {
+    clearInterval(myInterval)
+})
