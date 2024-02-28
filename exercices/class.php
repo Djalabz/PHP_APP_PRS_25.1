@@ -133,4 +133,4 @@ class Vehicule {
 
 $car = new Vehicule;
 echo $car->type;
-$car->type = "Mercedez";
+$car->setType('Mercedez');

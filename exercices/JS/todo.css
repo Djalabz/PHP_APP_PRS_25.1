@@ -52,3 +52,8 @@ li {
 ul {
     list-style-type: none;
 }
+
+.checked {
+    text-decoration: line-through;
+    opacity : 0.5;
+}
