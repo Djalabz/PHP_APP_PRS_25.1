@@ -21,7 +21,6 @@ const prs = [
     'LALANNE Samuel',
     'MABICKASSA BOUSSOUGOU Serge-Daryl',
     'MARTIN Gabriel',
-    'OTABELA Juan Miguel',
     'RICHER Benjamin',
     'SOGLO Helsy Aubierge',
     'TARCHOUN Rayan',
